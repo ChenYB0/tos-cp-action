@@ -19,7 +19,7 @@ This action automates the transfer of files to a Tencent Object Storage (TOS) bu
 ```yaml
 steps:
   - name: Transfer files to TOS
-    uses: ChenYB0@v1.0 # Replace with the actual action path if published
+    uses: ChenYB0/tos-cp-action@main # Replace with the actual action path if published
     with:
       tos_bucket: "your-bucket-name"
       tos_access_key: ${{ secrets.TOS_ACCESS_KEY }}
