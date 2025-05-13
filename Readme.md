@@ -1,6 +1,6 @@
 # TOS Bucket File Transfer Action
 
-This action automates the transfer of files to a Tencent Object Storage (TOS) bucket using the `tosutil` command-line tool. It handles authentication, configuration, and file transfer operations seamlessly.
+This action automates the transfer of files to a volcengine object storage (TOS) bucket using the `tosutil` command-line tool. It handles authentication, configuration, and file transfer operations seamlessly.
 
 ## Inputs
 
