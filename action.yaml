@@ -4,3 +4,6 @@ author: ChenYB0
 runs:
   using: docker
   image: Dockerfile
+branding:
+  icon: refresh-cw
+  color: green
