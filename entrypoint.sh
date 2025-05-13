@@ -37,7 +37,7 @@ tosutil config -i=${TOS_ACCESS_KEY} -k=${TOS_SECRET_KEY} -re=${TOS_REGION} -e=${
 # Copy files from the source directory to the TOS bucket using tosutil
 # If SOURCE_DIR is not set, use the current directory as the source
 # If DEST_DIR is not set, use the root of the bucket as the destination
-sh -c "tosutil cp ${SOURCE_DIR:-.} tos://${TOS_BUCKET}/${DEST_DIR} -r"
+sh -c "tosutil cp ${SOURCE_DIR:-.} tos://${TOS_BUCKET}/${DEST_DIR} -r -flat"
 
 # Remove the tosutil configuration file from the home directory
 rm -rf ~/.tosutilconfig
