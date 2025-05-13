@@ -1,0 +1,6 @@
+name: "tos cp action"
+description: "cp a directory to an TOS bucket"
+author: ChenYB0
+runs:
+  using: docker
+  image: Dockerfile
