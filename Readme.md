@@ -6,13 +6,13 @@ This action automates the transfer of files to a volcengine object storage (TOS)
 
 | Input           | Description                                                                 | Required | Default Value       |
 |-----------------|-----------------------------------------------------------------------------|----------|---------------------|
-| `tos_bucket`    | The name of the TOS bucket where files will be transferred.                 | Yes      | -                   |
-| `tos_access_key`| The access key for TOS authentication.                                      | Yes      | -                   |
-| `tos_secret_key`| The secret key for TOS authentication.                                      | Yes      | -                   |
-| `tos_region`    | The region where the TOS bucket is located. Defaults to "cn-beijing".       | No       | `cn-beijing`        |
-| `tos_endpoint`  | The endpoint URL for TOS. Defaults to "tos-cn-beijing.volces.com".          | No       | `tos-cn-beijing.volces.com` |
-| `source_dir`    | The source directory containing files to transfer. Defaults to current dir.| No       | Current directory   |
-| `dest_dir`      | The destination directory in the TOS bucket. Defaults to root of the bucket.| No       | Root of the bucket  |
+| `TOS_BUCKET`    | The name of the TOS bucket where files will be transferred.                 | Yes      | -                   |
+| `TOS_ACCESS_KEY`| The access key for TOS authentication.                                      | Yes      | -                   |
+| `TOS_SECRET_KEY`| The secret key for TOS authentication.                                      | Yes      | -                   |
+| `TOS_REGION`    | The region where the TOS bucket is located. Defaults to "cn-beijing".       | No       | `cn-beijing`        |
+| `TOS_ENDPOINT`  | The endpoint URL for TOS. Defaults to "tos-cn-beijing.volces.com".          | No       | `tos-cn-beijing.volces.com` |
+| `SOURCE_DIR`    | The source directory containing files to transfer. Defaults to current dir.| No       | Current directory   |
+| `DEST_DIR`      | The destination directory in the TOS bucket. Defaults to root of the bucket.| No       | Root of the bucket  |
 
 ## Example Usage
 
@@ -21,11 +21,11 @@ steps:
   - name: Transfer files to TOS
     uses: ChenYB0/tos-cp-action@main # Replace with the actual action path if published
     with:
-      tos_bucket: "your-bucket-name"
-      tos_access_key: ${{ secrets.TOS_ACCESS_KEY }}
-      tos_secret_key: ${{ secrets.TOS_SECRET_KEY }}
-      tos_region: "${{ secrets.TOS_REGION }}"  # Optional
-      tos_endpoint: "${{ secrets.TOS_ENDPOINT }}"  # Optional
-      source_dir: "./dist"  # Optional
-      dest_dir: "releases"  # Optional
+      TOS_BUCKET: "your-bucket-name"
+      TOS_ACCESS_KEY: ${{ secrets.TOS_ACCESS_KEY }}
+      TOS_SECRET_KEY: ${{ secrets.TOS_SECRET_KEY }}
+      TOS_REGION: "${{ secrets.TOS_REGION }}"  # Optional
+      TOS_ENDPOINT: "${{ secrets.TOS_ENDPOINT }}"  # Optional
+      SOURCE_DIR: "./dist"  # Optional
+      DEST_DIR: "releases"  # Optional
 ```
