@@ -20,7 +20,7 @@ This action automates the transfer of files to a volcengine object storage (TOS)
 steps:
   - name: Transfer files to TOS
     uses: ChenYB0/tos-cp-action@main # Replace with the actual action path if published
-    with:
+    env:
       TOS_BUCKET: "your-bucket-name"
       TOS_ACCESS_KEY: ${{ secrets.TOS_ACCESS_KEY }}
       TOS_SECRET_KEY: ${{ secrets.TOS_SECRET_KEY }}
